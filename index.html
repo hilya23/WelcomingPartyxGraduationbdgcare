@@ -32,26 +32,31 @@
       scroll-margin-top: 70px;
     }
 
-    #home {
-  background: url("BGHome.png") center/cover no-repeat;
-    color: white;
-}
-
     #about { background: linear-gradient(120deg, #DB3F52, #FFEEA6); color: white; }
+    #Graduation {
+      background: url("BGHome.png") center/cover no-repeat;
+      color: white;
+    }
+    #welcoming Party{ background: linear-gradient(120deg, #FFEEA6, #DB3F52); color: white; }
     #event { background: linear-gradient(120deg, #FFEEA6, #DB3F52); color: white; }
-    #rundown {
-  width: 100%;
-  border-collapse: collapse;
-  background: linear-gradient(135deg, #DB3F52, #FFEEA6);
-}
+    #welcoming-rundown { background: linear-gradient(120deg, #DB3F52, #FFEEA6); color: white; }
+    #rundown table, #welcoming-rundown table {
+      width: 100%;
+      border-collapse: collapse;
+      background: linear-gradient(135deg, #DB3F52, #FFEEA6);
+    }
+    #rundown th, #rundown td, #welcoming-rundown th, #welcoming-rundown td {
+      border: 1px solid #555;
+      padding: 8px;
+      text-align: center;
+      color: #000;
+      background-color: rgba(255,255,255,0.3);
+    }
+    .highlight {
+      background-color: gold !important;
+      font-weight: bold;
+    }
 
-#rundown th, #rundown td {
-  border: 1px solid #555;
-  padding: 8px;
-  text-align: center;
-  color: #000;
-  background-color: rgba(255,255,255,0.3); /* supaya teks tetap terbaca */
-}
     #gallery { background: linear-gradient(120deg, #DB3F52, #FFEEA6); color: white; }
     #contact { background: linear-gradient(120deg, #FFEEA6, #DB3F52); color: white; }
 
@@ -72,11 +77,19 @@
     }
 
     /* ----- GALLERY GRID ----- */
+    .gallery-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      width: 100%;
+      max-width: 1000px;
+      margin-top: 2rem;
+    }
+    .gallery-block h2 { margin-bottom: 1rem; }
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
       gap: 1rem;
-      margin-top: 2rem;
     }
     .gallery-grid img {
       width: 100%;
@@ -93,6 +106,7 @@
     @media (max-width: 600px) {
       h1 { font-size: 2rem; }
       p { max-width: 90%; }
+      .gallery-two { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -102,28 +116,56 @@
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
-    <a href="#event">Event</a>
+    <a href="#welcoming">Welcoming</a>
+    <a href="#welcoming-rundown">Welcoming Rundown</a>
+    <a href="#event">Graduation</a>
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- HOME -->
+  <!-- ABOUT -->
+  <section id="about">
+    <h1>Tentang BDGCare</h1>
+    <p>BDGCare bukan sekadar sebuah organisasi—ini adalah keluarga besar yang lahir dari semangat berbagi dan peduli. Di sini, setiap anggota didorong untuk tumbuh, saling mendukung, dan menghadirkan energi positif dalam setiap kegiatan.</p>
+  </section>
+
+  <!-- GRADUATION -->
   <section id="home">
     <h1>Graduation BDGCare Batch 6 🎓</h1>
     <p>Graduation BDGCare Batch 6 adalah momen spesial untuk merayakan perjalanan luar biasa para anggota batch 6. Acara ini dibuat sebagai bentuk apresiasi atas dedikasi serta kontribusi setiap anggota batch 6 selama ini.
       <br><br>
-Graduation BDGCare Batch 6 mengusung tema “Ride as One, Grow as One” yang terinspirasi dari semangat film Fast and Furious — di mana perjalanan bukan hanya tentang kecepatan, tapi tentang keluarga yang selalu tumbuh bersama, saling mendukung, dan tak pernah meninggalkan satu sama lain.💜</p>
-    <a href="https://forms.gle/VeFsmSkXNPXbfC1H8" class="btn" target="_blank">Konfirmasi Kehadiran</a>
+      Graduation BDGCare Batch 6 mengusung tema “Ride as One, Grow as One” yang terinspirasi dari semangat film Fast and Furious — di mana perjalanan bukan hanya tentang kecepatan, tapi tentang keluarga yang selalu tumbuh bersama, saling mendukung, dan tak pernah meninggalkan satu sama lain.💜
+    </p>
+    <a href="https://forms.gle/VeFsmSkXNPXbfC1H8" class="btn" target="_blank">Konfirmasi Kehadiran Graduation</a>
   </section>
-  
-  <!-- ABOUT -->
-  <section id="about">
-    <h1>Tentang BDGCare</h1>
-    <p>BDGCare bukan sekadar sebuah organisasi—ini adalah keluarga besar yang lahir dari semangat berbagi dan peduli. Di sini, setiap anggota didorong untuk tumbuh, saling mendukung, dan menghadirkan energi positif dalam setiap kegiatan.
 
-Lebih dari sekadar berkegiatan bersama, BDGCare adalah tempat di mana persahabatan terjalin, ide-ide kreatif berkembang, dan setiap pencapaian dirayakan bersama. Komunitas ini membuktikan bahwa kepedulian dan kolaborasi dapat menciptakan momen-momen berharga yang tak terlupakan.
+  <!-- WELCOMING PARTY-->
+  <section id="welcoming">
+    <h1>Welcoming Party Batch 7 💛</h1>
+    <p>Welcoming Party adalah awal perjalanan anggota baru Batch 7 untuk mengenal keluarga besar BDGCare. Acara ini penuh semangat, kebersamaan, dan kehangatan agar setiap anggota baru merasa disambut dan didukung sejak awal 💛</p>
+    <a href="https://bit.ly/RSVPWelpartxGradu" class="btn" target="_blank">Konfirmasi Kehadiran</a>
+  </section>
 
-Dengan BDGCare, setiap anggota tidak hanya menjadi bagian dari sebuah organisasi—mereka menjadi bagian dari keluarga yang hangat, penuh inspirasi, dan selalu siap mendukung satu sama lain. 💜</p>
+  <!-- WELCOMING RUNDOWN -->
+  <section id="welcoming-rundown">
+    <h2>Rundown Welcoming Party</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Time Start</th>
+          <th>Time Finish</th>
+          <th>Duration</th>
+          <th>Descriptions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>12.00</td><td>13.00</td><td>60 mnt</td><td>Persiapan Keberangkatan</td></tr>
+        <tr><td>14.00</td><td>15.00</td><td>60 mnt</td><td>Check In & Persiapan</td></tr>
+        <tr><td>15.00</td><td>15.30</td><td>30 mnt</td><td>Ice Breaking</td></tr>
+        <tr><td>15.30</td><td>16.30</td><td>60 mnt</td><td>Fun Games</td></tr>
+        <tr><td>16.30</td><td>17.30</td><td>60 mnt</td><td>Bonding Session</td></tr>
+      </tbody>
+    </table>
   </section>
 
   <!-- EVENT -->
@@ -139,50 +181,60 @@ Dengan BDGCare, setiap anggota tidak hanya menjadi bagian dari sebuah organisasi
   <!-- RUNDOWN -->
   <section id="rundown">
     <h2>Rundown Keseluruhan</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Time Start</th>
-        <th>Time Finish</th>
-        <th>Duration</th>
-        <th>Descriptions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>14.00</td><td>15.00</td><td>60 mnt</td><td>Check Villa</td></tr>
-      <tr><td>15.00</td><td>15.30</td><td>30 mnt</td><td>Istirahat Sholat</td></tr>
-      <tr><td>15.30</td><td>15.40</td><td>10 mnt</td><td>Pembukaan</td></tr>
-      <tr><td>15.40</td><td>16.30</td><td>50 mnt</td><td>Sesi Edukasi</td></tr>
-      <tr><td>16.30</td><td>18.00</td><td>90 mnt</td><td>Graduation (Ride as one, Grow as one)</td></tr>
-      <tr><td>18.00</td><td>19.00</td><td>60 mnt</td><td>Istirahat Sholat</td></tr>
-      <tr><td>19.00</td><td>20.00</td><td>60 mnt</td><td>Makan malam</td></tr>
-      <tr><td>20.00</td><td>21.00</td><td>60 mnt</td><td>Post to Post</td></tr>
-      <tr><td>21.00</td><td>22.00</td><td>60 mnt</td><td>Istirahat</td></tr>
-      <tr><td>22.00</td><td>00.00</td><td>120 mnt</td><td>Sharing Session</td></tr>
-      <tr><td>07.00</td><td>07.30</td><td>30 mnt</td><td>Senam</td></tr>
-      <tr><td>07.30</td><td>08.30</td><td>60 mnt</td><td>Games</td></tr>
-      <tr><td>08.30</td><td>09.00</td><td>30 mnt</td><td>Sarapan</td></tr>
-      <tr><td>09.00</td><td>09.10</td><td>10 mnt</td><td>Penutupan</td></tr>
-    </tbody>
-  </table>
-</section>
-
+    <table>
+      <thead>
+        <tr>
+          <th>Time Start</th>
+          <th>Time Finish</th>
+          <th>Duration</th>
+          <th>Descriptions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>14.00</td><td>15.00</td><td>60 mnt</td><td>Check Villa</td></tr>
+        <tr><td>15.00</td><td>15.30</td><td>30 mnt</td><td>Istirahat Sholat</td></tr>
+        <tr><td>15.30</td><td>15.40</td><td>10 mnt</td><td>Pembukaan</td></tr>
+        <tr><td>15.40</td><td>16.30</td><td>50 mnt</td><td>Sesi Edukasi</td></tr>
+        <tr class="highlight"><td>16.30</td><td>18.00</td><td>90 mnt</td><td>Graduation (Ride as one, Grow as one)</td></tr>
+        <tr><td>18.00</td><td>19.00</td><td>60 mnt</td><td>Istirahat Sholat</td></tr>
+        <tr><td>19.00</td><td>20.00</td><td>60 mnt</td><td>Makan malam</td></tr>
+      </tbody>
+    </table>
+  </section>
 
   <!-- GALLERY -->
   <section id="gallery">
     <h1>Wall of Memories</h1>
-    <p>(Soon) Best 3 Pictures at Graduation Batch 6 💜📸</p>
-    <div class="gallery-grid">
-      <img src="img1.jpg" alt="1">
-      <img src="img2.jpg" alt="2">
-      <img src="img3.jpg" alt="3">
+    <div class="gallery-two">
+
+      <div class="gallery-block">
+        <h2>Graduation 💜</h2>
+        <h1>(Soon) Best of 3 Pictures at Graduation Batch 6 💜</h1>
+        <div class="gallery-grid">
+          <img src="grad1.jpg" alt="1">
+          <img src="grad2.jpg" alt="2">
+          <img src="grad3.jpg" alt="3">
+        </div>
+        <a href="https://drive.google.com/drive/folders/1sEFZtxsZkH8bwVupP895r6I07zFrqRYS" class="btn" target="_blank">Dokumentasi Graduation</a>
+      </div>
+
+      <div class="gallery-block">
+        <h2>Welcoming Party 💛</h2>
+        <h1>(Soon) Best of 3 Pictures at Welcoming Party 💛</h1>
+        <div class="gallery-grid">
+          <img src="wel1.jpg" alt="1">
+          <img src="wel2.jpg" alt="2">
+          <img src="wel3.jpg" alt="">
+        </div>
+        <a href="https://drive.google.com/drive/folders/1TkDqfCURCZ4GhoVlsW01WendWDD71qMa?usp=sharing" class="btn" target="_blank">Dokumentasi Welcoming</a>
+      </div>
+
     </div>
-     <a href="https://drive.google.com/drive/folders/1sEFZtxsZkH8bwVupP895r6I07zFrqRYS?usp=sharing" target="_blank" class="btn">Dokumentasi</a></p>
   </section>
 
   <!-- CONTACT -->
   <section id="contact">
-    <h1>Contact Person Graduation Batch 6</h1>
+    <h1>Contact Person</h1>
     <p>📩 Email: hilyahmdh18@gmail.com<br>
        📞 WhatsApp: +62 81224423292</p>
   </section>
@@ -194,16 +246,3 @@ Dengan BDGCare, setiap anggota tidak hanya menjadi bagian dari sebuah organisasi
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
