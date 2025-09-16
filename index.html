@@ -6,221 +6,108 @@
   <title>Graduation BDGCare Batch 6</title>
   <style>
     /* ----- GLOBAL ----- */
-    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-    body { font-family: 'Poppins', sans-serif; line-height: 1.6; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+    }
 
     /* ----- NAVBAR ----- */
     nav {
-      position: fixed; top: 0; width: 100%;
+      position: fixed;
+      top: 0;
+      width: 100%;
       background: linear-gradient(90deg, #DB3F52, #FFEEA6);
-      display: flex; justify-content: center; gap: 2rem;
-      padding: 1rem 0; z-index: 1000;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      z-index: 1000;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
     nav a {
-      color: white; text-decoration: none; font-weight: bold;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
       transition: opacity 0.3s;
     }
-    nav a:hover { opacity: 0.7; }
+    nav a:hover {
+      opacity: 0.7;
+    }
 
     /* ----- SECTION ----- */
     section {
       min-height: 100vh;
       padding: 8rem 2rem 4rem;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
       scroll-margin-top: 70px;
     }
 
-    #about { background: linear-gradient(120deg, #DB3F52, #FFEEA6); color: white; }
-    #Graduation {
+    #home {
       background: url("BGHome.png") center/cover no-repeat;
       color: white;
     }
-    #welcoming Party{ background: linear-gradient(120deg, #FFEEA6, #DB3F52); color: white; }
-    #event { background: linear-gradient(120deg, #FFEEA6, #DB3F52); color: white; }
-    #rundown table, {
+
+    #about {
+      background: linear-gradient(120deg, #DB3F52, #FFEEA6);
+      color: white;
+    }
+
+    #event {
+      background: linear-gradient(120deg, #FFEEA6, #DB3F52);
+      color: white;
+    }
+
+    #rundown {
       width: 100%;
       border-collapse: collapse;
       background: linear-gradient(135deg, #DB3F52, #FFEEA6);
     }
-    #rundown th, #rundown td, #welcoming-rundown th, #welcoming-rundown td {
+
+    #rundown th,
+    #rundown td {
       border: 1px solid #555;
       padding: 8px;
       text-align: center;
       color: #000;
-      background-color: rgba(255,255,255,0.3);
-    }
-    .highlight {
-      background-color: gold !important;
-      font-weight: bold;
+      background-color: rgba(255,255,255,0.3); /* supaya teks tetap terbaca */
     }
 
-    #gallery { background: linear-gradient(120deg, #DB3F52, #FFEEA6); color: white; }
-    #contact { background: linear-gradient(120deg, #FFEEA6, #DB3F52); color: white; }
+    #gallery {
+      background: linear-gradient(120deg, #DB3F52, #FFEEA6);
+      color: white;
+    }
 
-    h1 { font-size: 3rem; margin-bottom: 1rem; }
-    p { max-width: 600px; margin-bottom: 1rem; }
+    #contact {
+      background: linear-gradient(120deg, #FFEEA6, #DB3F52);
+      color: white;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      max-width: 600px;
+      margin-bottom: 1rem;
+    }
 
     /* ----- BUTTON ----- */
     .btn {
-      display: inline-block; background: white; color: #333;
-      padding: 0.75rem 1.5rem; border-radius: 30px;
-      text-decoration: none; font-weight: bold; margin-top: 1rem;
-      transition: transform 0.3s, background 0.3s;
-    }
-    .btn:hover {
-      transform: scale(1.05);
-      background: #FFD700;
+      display: inline-block;
+      background: white;
       color: #333;
-    }
-
-    /* ----- GALLERY GRID ----- */
-    .gallery-two {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      width: 100%;
-      max-width: 1000px;
-      margin-top: 2rem;
-    }
-    .gallery-block h2 { margin-bottom: 1rem; }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      gap: 1rem;
-    }
-    .gallery-grid img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    /* ----- FOOTER ----- */
-    footer {
-      background: #333; color: #fff; text-align: center;
-      padding: 2rem; font-size: 0.9rem;
-    }
-
-    /* ----- RESPONSIVE ----- */
-    @media (max-width: 600px) {
-      h1 { font-size: 2rem; }
-      p { max-width: 90%; }
-      .gallery-two { grid-template-columns: 1fr; }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- NAVBAR -->
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#welcoming">Welcoming</a>
-    <a href="#welcoming-rundown">Welcoming Rundown</a>
-    <a href="#event">Graduation</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <h1>Tentang BDGCare</h1>
-    <p>BDGCare bukan sekadar sebuah organisasi—ini adalah keluarga besar yang lahir dari semangat berbagi dan peduli. Di sini, setiap anggota didorong untuk tumbuh, saling mendukung, dan menghadirkan energi positif dalam setiap kegiatan.</p>
-  </section>
-
-  <!-- GRADUATION -->
-  <section id="home">
-    <h1>Graduation BDGCare Batch 6 🎓</h1>
-    <p>Graduation BDGCare Batch 6 adalah momen spesial untuk merayakan perjalanan luar biasa para anggota batch 6. Acara ini dibuat sebagai bentuk apresiasi atas dedikasi serta kontribusi setiap anggota batch 6 selama ini.
-      <br><br>
-      Graduation BDGCare Batch 6 mengusung tema “Ride as One, Grow as One” yang terinspirasi dari semangat film Fast and Furious — di mana perjalanan bukan hanya tentang kecepatan, tapi tentang keluarga yang selalu tumbuh bersama, saling mendukung, dan tak pernah meninggalkan satu sama lain.💜
-    </p>
-    <a href="https://forms.gle/VeFsmSkXNPXbfC1H8" class="btn" target="_blank">Konfirmasi Kehadiran Graduation</a>
-  </section>
-
-  <!-- WELCOMING PARTY-->
-  <section id="welcoming">
-    <h1>Welcoming Party Batch 7 💛</h1>
-    <p>Welcoming Party adalah awal perjalanan anggota baru Batch 7 untuk mengenal keluarga besar BDGCare. Acara ini penuh semangat, kebersamaan, dan kehangatan agar setiap anggota baru merasa disambut dan didukung sejak awal 💛</p>
-    <a href="https://bit.ly/RSVPWelpartxGradu" class="btn" target="_blank">Konfirmasi Kehadiran</a>
-  </section>
-
-  <!-- EVENT -->
-  <section id="event">
-    <h1>Rangkaian Acara Graduation Batch 6</h1>
-    <p>📍 Lokasi: The New Villa Rajawali <br>
-       📅 Tanggal: 20 September 2025<br>
-       ⏰ Jam: 16.15–18.00 WIB<br>
-       💃 Dress code: Streetwear <br>
-       <a href="https://share.google/JWGp0yzNQxTW3KT96" target="_blank" class="btn">Lihat Lokasi</a></p>
-  </section>
-
-  <!-- RUNDOWN -->
-  <section id="rundown">
-    <h2>Rundown Keseluruhan</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Time Start</th>
-          <th>Time Finish</th>
-          <th>Duration</th>
-          <th>Descriptions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>14.00</td><td>15.00</td><td>60 mnt</td><td>Check Villa</td></tr>
-        <tr><td>15.00</td><td>15.30</td><td>30 mnt</td><td>Istirahat Sholat</td></tr>
-        <tr><td>15.30</td><td>15.40</td><td>10 mnt</td><td>Pembukaan</td></tr>
-        <tr><td>15.40</td><td>16.30</td><td>50 mnt</td><td>Sesi Edukasi</td></tr>
-        <tr class="highlight"><td>16.30</td><td>18.00</td><td>90 mnt</td><td>Graduation (Ride as one, Grow as one)</td></tr>
-        <tr><td>18.00</td><td>19.00</td><td>60 mnt</td><td>Istirahat Sholat</td></tr>
-        <tr><td>19.00</td><td>20.00</td><td>60 mnt</td><td>Makan malam</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <!-- GALLERY -->
-  <section id="gallery">
-    <h1>Wall of Memories</h1>
-    <div class="gallery-two">
-
-      <div class="gallery-block">
-        <h2>Graduation 💜</h2>
-        <h3>(Soon) Best of 3 Pictures at Graduation Batch 6 💜</h3>
-        <div class="gallery-grid">
-          <img src="grad1.jpg" alt="1">
-          <img src="grad2.jpg" alt="2">
-          <img src="grad3.jpg" alt="3">
-        </div>
-        <a href="https://drive.google.com/drive/folders/1sEFZtxsZkH8bwVupP895r6I07zFrqRYS" class="btn" target="_blank">Dokumentasi Graduation</a>
-      </div>
-
-      <div class="gallery-block">
-        <h2>Welcoming Party 💛</h2>
-        <h3>(Soon) Best of 3 Pictures at Welcoming Party 💛</h3>
-        <div class="gallery-grid">
-          <img src="wel1.jpg" alt="1">
-          <img src="wel2.jpg" alt="2">
-          <img src="wel3.jpg" alt="">
-        </div>
-        <a href="https://drive.google.com/drive/folders/1TkDqfCURCZ4GhoVlsW01WendWDD71qMa?usp=sharing" class="btn" target="_blank">Dokumentasi Welcoming</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <h1>Contact Person</h1>
-    <p>📩 Email: hilyahmdh18@gmail.com<br>
-       📞 WhatsApp: +62 81224423292</p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    &copy; 2025 BDGCare. All rights reserved.
-  </footer>
-
-</body>
-</html>
-
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
